@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: TeronAutoAttack
+## Notes: Simulates the function of the "/startattack" function from Classic WoW and SoD.
+## Author: Teron
+## Version: v1.0.0
+## SavedVariablesPerAccount: TeronAutoAttack_Config
+
+TeronAutoAttack.lua
