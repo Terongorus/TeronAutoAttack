@@ -25,6 +25,7 @@ end
 -- New function and slash command for Auto Shot
 SLASH_AUTOSHOT1 = '/startautoshot'
 function SlashCmdList.AUTOSHOT(command)
+    local z = "Auto Shot"; -- Name of the ranged attack ability
     for i = 1, 172 do
         local actionName = GetActionText(i);
         if actionName == z then -- Check if the action matches "Auto Shot"
