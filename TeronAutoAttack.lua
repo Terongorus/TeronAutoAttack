@@ -21,3 +21,17 @@ function SlashCmdList.ATTACK(command)
         --CastSpellByName'Attack'
     end
 end
+
+-- New function and slash command for Auto Shot
+SLASH_AUTOSHOT1 = '/startautoshot'
+function SlashCmdList.AUTOSHOT(command)
+    for i = 1, 172 do
+        local actionName = GetActionText(i);
+        if actionName == z then -- Check if the action matches "Auto Shot"
+            if not IsCurrentAction(i) then
+                UseAction(i); -- Cast "Auto Shot" only if it's not already active
+            end
+            break;
+        end
+    end
+end
