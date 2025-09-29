@@ -25,12 +25,11 @@ end
 -- New function and slash command for Auto Shot
 SLASH_AUTOSHOT1 = '/startautoshot'
 function SlashCmdList.AUTOSHOT(command)
-    local z = "Auto Shot"; -- Name of the ranged attack ability
-    for i = 1, 172 do
-        local actionName = GetActionText(i);
-        if actionName == z then -- Check if the action matches "Auto Shot"
-            if not IsCurrentAction(i) then
-                UseAction(i); -- Cast "Auto Shot" only if it's not already active
+    for i = 1, 120 do
+        local texture = GetActionTexture(i);
+        if texture and string.find(texture, "Weapon") then
+            if not IsAutoRepeatAction(i) then
+                UseAction(i);
             end
             break;
         end
